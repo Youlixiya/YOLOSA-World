@@ -19,7 +19,8 @@ classifiers = [
     "License :: OSI Approved :: Apache Software License",
 ]
 dependencies = [
-    "ultralytics"
+    "ultralytics",
+    "gradio==4.7.1"
 ]
 
 [tool.setuptools.packages.find]

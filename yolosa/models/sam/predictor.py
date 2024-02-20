@@ -16,6 +16,7 @@ from .utils.amg import calculate_stability_score
 
 
 class SamPredictor:
+    img_size = 1024
     def __init__(
         self,
         sam_model: Sam,
@@ -29,7 +30,7 @@ class SamPredictor:
         """
         super().__init__()
         self.model = sam_model
-        self.transform = ResizeLongestSide(sam_model.image_encoder.img_size)
+        self.transform = ResizeLongestSide(self.img_size)
         self.stability_score_offset = 1.0
         self.reset_image()
 
