@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=43.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yolosa"
+version = "1.0.0"
+description = "YOLOSA-World: YOLO-World shares the backbone implementation with SAM."
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    { name = "Zhi Jie wang" }
+]
+maintainers = [
+    { name = "Zhi Jie wang" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+]
+dependencies = [
+    "ultralytics"
+]
+
+[tool.setuptools.packages.find]
+exclude = ["tests*"]
+
+[tool.wheel]
+exclude = ["tests*"]
+
+
+
+
